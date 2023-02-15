@@ -159,7 +159,10 @@
 <li class="chapter" data-level="6.6" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#data-sets-with-embedded-patterns"><i class="fa fa-check"></i><b>6.6</b> Data sets with embedded patterns</a></li>
 <li class="chapter" data-level="6.7" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#hidden-variables"><i class="fa fa-check"></i><b>6.7</b> Hidden Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a></li>
+<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="normal_distribution.html"><a href="normal_distribution.html#central_limit_theorem"><i class="fa fa-check"></i><b>7.1</b> Central Limit Theorem</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="Derived_attributes.html"><a href="Derived_attributes.html"><i class="fa fa-check"></i><b>8</b> 🔖 Data Transformation with Derived Attributes</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="Derived_attributes.html"><a href="Derived_attributes.html#making-new-categorical-attributes"><i class="fa fa-check"></i><b>8.1</b> Making new categorical attributes</a></li>
@@ -423,7 +426,7 @@ Table below describes the data set based on hypothetical temperature readings in
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-106">Table 12.1: </span>Snippet of Temperature Dataset
+<span id="tab:unnamed-chunk-108">Table 12.1: </span>Snippet of Temperature Dataset
 </caption>
 <thead>
 <tr>
@@ -440,54 +443,65 @@ Temprature
 <tbody>
 <tr>
 <td style="text-align:left;">
-1397
+887
 </td>
 <td style="text-align:left;">
 Holmdel
 </td>
 <td style="text-align:right;">
-98
+71
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-1797
+374
 </td>
 <td style="text-align:left;">
-Highland Park
+North Brunswick
 </td>
 <td style="text-align:right;">
-57
+86
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-1349
+1513
 </td>
 <td style="text-align:left;">
-New Brunswick
+Lawrencville
 </td>
 <td style="text-align:right;">
-98
+94
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-1087
+791
 </td>
 <td style="text-align:left;">
 Asbury Park
 </td>
 <td style="text-align:right;">
-80
+96
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-1781
+1265
 </td>
 <td style="text-align:left;">
-Holmdel
+Highland Park
+</td>
+<td style="text-align:right;">
+82
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1169
+</td>
+<td style="text-align:left;">
+Asbury Park
 </td>
 <td style="text-align:right;">
 79
@@ -495,32 +509,32 @@ Holmdel
 </tr>
 <tr>
 <td style="text-align:left;">
-342
+1537
 </td>
 <td style="text-align:left;">
-Lawrencville
+Jersey City
 </td>
 <td style="text-align:right;">
-83
+92
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-1730
+264
+</td>
+<td style="text-align:left;">
+Atlantic City
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1579
 </td>
 <td style="text-align:left;">
 Newark
-</td>
-<td style="text-align:right;">
-83
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-968
-</td>
-<td style="text-align:left;">
-Princeton
 </td>
 <td style="text-align:right;">
 67
@@ -528,24 +542,13 @@ Princeton
 </tr>
 <tr>
 <td style="text-align:left;">
-1354
+1551
 </td>
 <td style="text-align:left;">
 Passaic
 </td>
 <td style="text-align:right;">
-76
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-972
-</td>
-<td style="text-align:left;">
-Ocean Grove
-</td>
-<td style="text-align:right;">
-59
+56
 </td>
 </tr>
 </tbody>

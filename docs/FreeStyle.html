@@ -159,7 +159,10 @@
 <li class="chapter" data-level="6.6" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#data-sets-with-embedded-patterns"><i class="fa fa-check"></i><b>6.6</b> Data sets with embedded patterns</a></li>
 <li class="chapter" data-level="6.7" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#hidden-variables"><i class="fa fa-check"></i><b>6.7</b> Hidden Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a></li>
+<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="normal_distribution.html"><a href="normal_distribution.html#central_limit_theorem"><i class="fa fa-check"></i><b>7.1</b> Central Limit Theorem</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="Derived_attributes.html"><a href="Derived_attributes.html"><i class="fa fa-check"></i><b>8</b> 🔖 Data Transformation with Derived Attributes</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="Derived_attributes.html"><a href="Derived_attributes.html#making-new-categorical-attributes"><i class="fa fa-check"></i><b>8.1</b> Making new categorical attributes</a></li>
@@ -464,7 +467,7 @@ tapply(moody$PARTICIPATION, moody$DOZES_OFF, mean)
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-116">Table 14.1: </span>Snippet of Moody Dataset
+<span id="tab:unnamed-chunk-118">Table 14.1: </span>Snippet of Moody Dataset
 </caption>
 <thead>
 <tr>
@@ -677,7 +680,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtb29keTwtcmVhZC5jc3YoXCJodHRwczovL3Jhdy5naXRo
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-128">Table 14.2: </span>Snippet of Party Dataset
+<span id="tab:unnamed-chunk-130">Table 14.2: </span>Snippet of Party Dataset
 </caption>
 <thead>
 <tr>
@@ -706,76 +709,53 @@ CaloriesDanc
 <tbody>
 <tr>
 <td style="text-align:left;">
-2038
-</td>
-<td style="text-align:left;">
-ItwasOK
-</td>
-<td style="text-align:left;">
-Rock
-</td>
-<td style="text-align:left;">
-Alex
-</td>
-<td style="text-align:left;">
-Janusz
-</td>
-<td style="text-align:left;">
-Manny
-</td>
-<td style="text-align:right;">
-316
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-189
+1470
 </td>
 <td style="text-align:left;">
 Boring
 </td>
 <td style="text-align:left;">
-Classical
-</td>
-<td style="text-align:left;">
-Janek
-</td>
-<td style="text-align:left;">
-Ada
-</td>
-<td style="text-align:left;">
-Angela
-</td>
-<td style="text-align:right;">
-463
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2071
-</td>
-<td style="text-align:left;">
-Boring
-</td>
-<td style="text-align:left;">
-Classical
+None
 </td>
 <td style="text-align:left;">
 Xi
 </td>
 <td style="text-align:left;">
-Ada
+Qiong
+</td>
+<td style="text-align:left;">
+Joe
+</td>
+<td style="text-align:right;">
+329
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4889
+</td>
+<td style="text-align:left;">
+Boring
+</td>
+<td style="text-align:left;">
+Techno
+</td>
+<td style="text-align:left;">
+Xi
+</td>
+<td style="text-align:left;">
+Qiong
 </td>
 <td style="text-align:left;">
 Manny
 </td>
 <td style="text-align:right;">
-54
+456
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-4030
+2022
 </td>
 <td style="text-align:left;">
 Fun
@@ -784,7 +764,7 @@ Fun
 Rock
 </td>
 <td style="text-align:left;">
-Alex
+Sonya
 </td>
 <td style="text-align:left;">
 Eva
@@ -793,18 +773,18 @@ Eva
 Vladimir
 </td>
 <td style="text-align:right;">
-179
+332
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2780
+4649
 </td>
 <td style="text-align:left;">
 Boring
 </td>
 <td style="text-align:left;">
-Classical
+HipHop
 </td>
 <td style="text-align:left;">
 Xi
@@ -813,10 +793,33 @@ Xi
 Ada
 </td>
 <td style="text-align:left;">
-Joe
+Manny
 </td>
 <td style="text-align:right;">
-477
+342
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4397
+</td>
+<td style="text-align:left;">
+Boring
+</td>
+<td style="text-align:left;">
+Rock
+</td>
+<td style="text-align:left;">
+Sonya
+</td>
+<td style="text-align:left;">
+Eva
+</td>
+<td style="text-align:left;">
+Angela
+</td>
+<td style="text-align:right;">
+314
 </td>
 </tr>
 </tbody>
@@ -903,7 +906,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJwYXJ0eTwtcmVhZC5jc3YoXCJodHRwczovL3Jhdy5naXRo
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-137">Table 14.3: </span>Snippet of Voting Dataset
+<span id="tab:unnamed-chunk-139">Table 14.3: </span>Snippet of Voting Dataset
 </caption>
 <thead>
 <tr>
@@ -935,7 +938,7 @@ Age
 <tbody>
 <tr>
 <td style="text-align:left;">
-2841
+9
 </td>
 <td style="text-align:left;">
 NoRestrictions
@@ -944,13 +947,39 @@ NoRestrictions
 NoRestrictions
 </td>
 <td style="text-align:left;">
-None
+ElectircOnly
+</td>
+<td style="text-align:left;">
+KnowNothings
+</td>
+<td style="text-align:left;">
+NoLimits
+</td>
+<td style="text-align:left;">
+NoCars
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+469
+</td>
+<td style="text-align:left;">
+ElectricOnly
+</td>
+<td style="text-align:left;">
+NoRestrictions
+</td>
+<td style="text-align:left;">
+ElectircOnly
 </td>
 <td style="text-align:left;">
 Royalists
 </td>
 <td style="text-align:left;">
-HardLiquerOnly
+NoLimits
 </td>
 <td style="text-align:left;">
 NoCars
@@ -961,33 +990,7 @@ NoCars
 </tr>
 <tr>
 <td style="text-align:left;">
-767
-</td>
-<td style="text-align:left;">
-None
-</td>
-<td style="text-align:left;">
-NoStores
-</td>
-<td style="text-align:left;">
-NoRestrictions
-</td>
-<td style="text-align:left;">
-Royalists
-</td>
-<td style="text-align:left;">
-None
-</td>
-<td style="text-align:left;">
-25mph
-</td>
-<td style="text-align:right;">
-73
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-4694
+153
 </td>
 <td style="text-align:left;">
 ElectricOnly
@@ -996,7 +999,7 @@ ElectricOnly
 OneStore
 </td>
 <td style="text-align:left;">
-NoRestrictions
+ElectircOnly
 </td>
 <td style="text-align:left;">
 KnowNothings
@@ -1008,44 +1011,44 @@ HardLiquerOnly
 NoCars
 </td>
 <td style="text-align:right;">
-25
+22
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2744
+3936
 </td>
 <td style="text-align:left;">
-None
+NoRestrictions
 </td>
 <td style="text-align:left;">
 NoStores
 </td>
 <td style="text-align:left;">
-None
+ElectircOnly
 </td>
 <td style="text-align:left;">
-Anarchists
+Royalists
 </td>
 <td style="text-align:left;">
-NoLimits
+HardLiquerOnly
 </td>
 <td style="text-align:left;">
 10mph
 </td>
 <td style="text-align:right;">
-21
+77
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2995
+1590
 </td>
 <td style="text-align:left;">
 None
 </td>
 <td style="text-align:left;">
-NoStores
+OneStore
 </td>
 <td style="text-align:left;">
 None
@@ -1057,10 +1060,10 @@ Anarchists
 NoLimits
 </td>
 <td style="text-align:left;">
-NoLimits
+NoCars
 </td>
 <td style="text-align:right;">
-54
+51
 </td>
 </tr>
 </tbody>
@@ -1192,7 +1195,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ2b3RlPC1yZWFkLmNzdihcImh0dHBzOi8vcmF3LmdpdGh1
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-152">Table 14.4: </span>Snippet of Sleep Dataset
+<span id="tab:unnamed-chunk-154">Table 14.4: </span>Snippet of Sleep Dataset
 </caption>
 <thead>
 <tr>
@@ -1224,25 +1227,25 @@ LastSleep
 <tbody>
 <tr>
 <td style="text-align:left;">
-1301
+1534
 </td>
 <td style="text-align:left;">
 Deep
 </td>
 <td style="text-align:right;">
-682
+827
 </td>
 <td style="text-align:right;">
-10
+3
 </td>
 <td style="text-align:left;">
-2Cups
+1Cup
 </td>
 <td style="text-align:right;">
 71
 </td>
 <td style="text-align:left;">
-Half
+Dark
 </td>
 <td style="text-align:left;">
 Shallow
@@ -1250,22 +1253,48 @@ Shallow
 </tr>
 <tr>
 <td style="text-align:left;">
-25
+685
 </td>
 <td style="text-align:left;">
 Little
 </td>
 <td style="text-align:right;">
-748
+528
 </td>
 <td style="text-align:right;">
-8
+3
 </td>
 <td style="text-align:left;">
-3Cups
+2Cups
 </td>
 <td style="text-align:right;">
-70
+58
+</td>
+<td style="text-align:left;">
+Full
+</td>
+<td style="text-align:left;">
+Shallow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+989
+</td>
+<td style="text-align:left;">
+Little
+</td>
+<td style="text-align:right;">
+112
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+ManyCups
+</td>
+<td style="text-align:right;">
+58
 </td>
 <td style="text-align:left;">
 Full
@@ -1276,80 +1305,54 @@ Deep
 </tr>
 <tr>
 <td style="text-align:left;">
-766
+572
 </td>
 <td style="text-align:left;">
 Deep
 </td>
 <td style="text-align:right;">
-795
+742
 </td>
 <td style="text-align:right;">
-1
+10
+</td>
+<td style="text-align:left;">
+ManyCups
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:left;">
+Full
+</td>
+<td style="text-align:left;">
+Shallow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+345
+</td>
+<td style="text-align:left;">
+Deep
+</td>
+<td style="text-align:right;">
+187
+</td>
+<td style="text-align:right;">
+6
 </td>
 <td style="text-align:left;">
 1Cup
 </td>
 <td style="text-align:right;">
-62
-</td>
-<td style="text-align:left;">
-Half
-</td>
-<td style="text-align:left;">
-Shallow
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1442
-</td>
-<td style="text-align:left;">
-Deep
-</td>
-<td style="text-align:right;">
-925
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-2Cups
-</td>
-<td style="text-align:right;">
-72
-</td>
-<td style="text-align:left;">
-Half
-</td>
-<td style="text-align:left;">
-Shallow
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1137
-</td>
-<td style="text-align:left;">
-Deep
-</td>
-<td style="text-align:right;">
-167
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:left;">
-3Cups
-</td>
-<td style="text-align:right;">
 60
 </td>
 <td style="text-align:left;">
-Half
+Dark
 </td>
 <td style="text-align:left;">
-Shallow
+Deep
 </td>
 </tr>
 </tbody>
@@ -1436,7 +1439,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJzbGVlcDwtcmVhZC5jc3YoXCJodHRwczovL3Jhdy5naXRo
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-161">Table 14.5: </span>Snippet of Movies Dataset
+<span id="tab:unnamed-chunk-163">Table 14.5: </span>Snippet of Movies Dataset
 </caption>
 <thead>
 <tr>
@@ -1465,7 +1468,7 @@ genre
 <tbody>
 <tr>
 <td style="text-align:left;">
-11489
+8948
 </td>
 <td style="text-align:left;">
 USA
@@ -1474,33 +1477,10 @@ USA
 PG
 </td>
 <td style="text-align:right;">
-5.83
+6.10
 </td>
 <td style="text-align:left;">
-High
-</td>
-<td style="text-align:left;">
-High
-</td>
-<td style="text-align:left;">
-Family
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-7303
-</td>
-<td style="text-align:left;">
-USA
-</td>
-<td style="text-align:left;">
-R
-</td>
-<td style="text-align:right;">
-7.18
-</td>
-<td style="text-align:left;">
-Low
+Medium
 </td>
 <td style="text-align:left;">
 Medium
@@ -1511,7 +1491,7 @@ Comedy
 </tr>
 <tr>
 <td style="text-align:left;">
-6622
+4840
 </td>
 <td style="text-align:left;">
 USA
@@ -1520,53 +1500,30 @@ USA
 PG-13
 </td>
 <td style="text-align:right;">
-7.17
-</td>
-<td style="text-align:left;">
-High
+5.09
 </td>
 <td style="text-align:left;">
 Medium
 </td>
 <td style="text-align:left;">
-Drama
+Medium
+</td>
+<td style="text-align:left;">
+Action
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-6662
+12104
 </td>
 <td style="text-align:left;">
-UK
+USA
 </td>
 <td style="text-align:left;">
-PG
+R
 </td>
 <td style="text-align:right;">
-7.54
-</td>
-<td style="text-align:left;">
-Medium
-</td>
-<td style="text-align:left;">
-Medium
-</td>
-<td style="text-align:left;">
-Drama
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-10720
-</td>
-<td style="text-align:left;">
-Australia
-</td>
-<td style="text-align:left;">
-PG
-</td>
-<td style="text-align:right;">
-8.30
+7.59
 </td>
 <td style="text-align:left;">
 Low
@@ -1576,6 +1533,52 @@ Low
 </td>
 <td style="text-align:left;">
 History
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3244
+</td>
+<td style="text-align:left;">
+USA
+</td>
+<td style="text-align:left;">
+PG
+</td>
+<td style="text-align:right;">
+6.08
+</td>
+<td style="text-align:left;">
+High
+</td>
+<td style="text-align:left;">
+Medium
+</td>
+<td style="text-align:left;">
+Comedy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5144
+</td>
+<td style="text-align:left;">
+USA
+</td>
+<td style="text-align:left;">
+PG
+</td>
+<td style="text-align:right;">
+5.78
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Medium
+</td>
+<td style="text-align:left;">
+Comedy
 </td>
 </tr>
 </tbody>
@@ -1703,7 +1706,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtb3ZpZXM8LXJlYWQuY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-172">Table 14.6: </span>Snippet of Canvas Dataset
+<span id="tab:unnamed-chunk-174">Table 14.6: </span>Snippet of Canvas Dataset
 </caption>
 <thead>
 <tr>
@@ -1726,16 +1729,16 @@ Grade
 <tbody>
 <tr>
 <td style="text-align:left;">
-253
+350
+</td>
+<td style="text-align:right;">
+88
 </td>
 <td style="text-align:right;">
 24
 </td>
 <td style="text-align:right;">
-95
-</td>
-<td style="text-align:right;">
-31.1
+81.6
 </td>
 <td style="text-align:left;">
 F
@@ -1743,50 +1746,33 @@ F
 </tr>
 <tr>
 <td style="text-align:left;">
-1165
+444
 </td>
 <td style="text-align:right;">
-17
+81
 </td>
 <td style="text-align:right;">
-66
+74
 </td>
 <td style="text-align:right;">
-21.9
+80.3
 </td>
 <td style="text-align:left;">
-F
+A
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-26
+922
 </td>
 <td style="text-align:right;">
-73
+39
 </td>
 <td style="text-align:right;">
-75
+89
 </td>
 <td style="text-align:right;">
-73.2
-</td>
-<td style="text-align:left;">
-B
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-56
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-55.8
+44.0
 </td>
 <td style="text-align:left;">
 C
@@ -1794,19 +1780,36 @@ C
 </tr>
 <tr>
 <td style="text-align:left;">
-1238
+996
 </td>
 <td style="text-align:right;">
-80
+18
 </td>
 <td style="text-align:right;">
-51
+91
 </td>
 <td style="text-align:right;">
-77.1
+25.3
 </td>
 <td style="text-align:left;">
-B
+F
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+544
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+19.7
+</td>
+<td style="text-align:left;">
+F
 </td>
 </tr>
 </tbody>
@@ -1908,7 +1911,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJncmFkZXM8LXJlYWQuY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-183">Table 14.7: </span>Snippet of Minimarket Dataset
+<span id="tab:unnamed-chunk-185">Table 14.7: </span>Snippet of Minimarket Dataset
 </caption>
 <thead>
 <tr>
@@ -1940,10 +1943,10 @@ Snacks
 <tbody>
 <tr>
 <td style="text-align:left;">
-7674
+18533
 </td>
 <td style="text-align:left;">
-Lager
+Ale
 </td>
 <td style="text-align:left;">
 Weekend
@@ -1952,13 +1955,13 @@ Weekend
 Metuchen
 </td>
 <td style="text-align:left;">
-Sprite
+Orange Juice
 </td>
 <td style="text-align:left;">
 Milky Way
 </td>
 <td style="text-align:left;">
-None
+Red
 </td>
 <td style="text-align:left;">
 None
@@ -1966,7 +1969,7 @@ None
 </tr>
 <tr>
 <td style="text-align:left;">
-9636
+17028
 </td>
 <td style="text-align:left;">
 Lager
@@ -1978,73 +1981,21 @@ Weekend
 New Brunswick
 </td>
 <td style="text-align:left;">
-Orange Juice
+Sprite
 </td>
 <td style="text-align:left;">
-Twix
+Snickers
 </td>
 <td style="text-align:left;">
-White
+Red
 </td>
 <td style="text-align:left;">
-Potato Chips
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2530
-</td>
-<td style="text-align:left;">
-None
-</td>
-<td style="text-align:left;">
-Weekend
-</td>
-<td style="text-align:left;">
-Metuchen
-</td>
-<td style="text-align:left;">
-Orange Juice
-</td>
-<td style="text-align:left;">
-Milky Way
-</td>
-<td style="text-align:left;">
-White
-</td>
-<td style="text-align:left;">
-None
+Pretzels
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-9700
-</td>
-<td style="text-align:left;">
-Lager
-</td>
-<td style="text-align:left;">
-Weekend
-</td>
-<td style="text-align:left;">
-Metuchen
-</td>
-<td style="text-align:left;">
-None
-</td>
-<td style="text-align:left;">
-Twix
-</td>
-<td style="text-align:left;">
-White
-</td>
-<td style="text-align:left;">
-Crackers
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2404
+3405
 </td>
 <td style="text-align:left;">
 None
@@ -2062,7 +2013,59 @@ Sprite
 Snickers
 </td>
 <td style="text-align:left;">
-White
+Red
+</td>
+<td style="text-align:left;">
+None
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4218
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Weekend
+</td>
+<td style="text-align:left;">
+New Brunswick
+</td>
+<td style="text-align:left;">
+Orange Juice
+</td>
+<td style="text-align:left;">
+Milky Way
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+None
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3323
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Weekday
+</td>
+<td style="text-align:left;">
+New Brunswick
+</td>
+<td style="text-align:left;">
+Cola
+</td>
+<td style="text-align:left;">
+Snickers
+</td>
+<td style="text-align:left;">
+None
 </td>
 <td style="text-align:left;">
 None
@@ -2144,7 +2147,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXJrZXQ8LXJlYWQuY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-190">Table 14.8: </span>Snippet of Airbnb Dataset
+<span id="tab:unnamed-chunk-192">Table 14.8: </span>Snippet of Airbnb Dataset
 </caption>
 <thead>
 <tr>
@@ -2179,16 +2182,16 @@ price
 <tbody>
 <tr>
 <td style="text-align:left;">
-28522
+33039
 </td>
 <td style="text-align:right;">
-27491566
+4172947
 </td>
 <td style="text-align:left;">
-Brooklyn Room with private rooftop
+Your Own 2-Bd ~ Comfortable and Unique ~ Bed-Stuy
 </td>
 <td style="text-align:left;">
-Alejandro
+Zoya
 </td>
 <td style="text-align:left;">
 Brooklyn
@@ -2197,27 +2200,27 @@ Brooklyn
 Bedford-Stuyvesant
 </td>
 <td style="text-align:left;">
-Private room
+Entire home/apt
 </td>
 <td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
-93.43777
+200.71560
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-24861
+17814
 </td>
 <td style="text-align:right;">
-4815848
+6524806
 </td>
 <td style="text-align:left;">
-Elegant NYC, 10mins to Manhattan!
+Great room for couples on a budget!
 </td>
 <td style="text-align:left;">
-Catherine
+Nicole
 </td>
 <td style="text-align:left;">
 Queens
@@ -2229,88 +2232,88 @@ Long Island City
 Private room
 </td>
 <td style="text-align:right;">
-20
-</td>
-<td style="text-align:right;">
-520.93331
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-16641
-</td>
-<td style="text-align:right;">
-15903188
-</td>
-<td style="text-align:left;">
-Private room in Astoria 10min ride to Central Park
-</td>
-<td style="text-align:left;">
-Julian
-</td>
-<td style="text-align:left;">
-Queens
-</td>
-<td style="text-align:left;">
-Astoria
-</td>
-<td style="text-align:left;">
-Private room
-</td>
-<td style="text-align:right;">
 5
 </td>
 <td style="text-align:right;">
-84.64905
+98.39152
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-5300
+25219
 </td>
 <td style="text-align:right;">
-12827921
+7966358
 </td>
 <td style="text-align:left;">
-Spacious LES Room&amp; Private Backyard
+NYC High End 2BR Midtown West Apt
 </td>
 <td style="text-align:left;">
-Andrew
+Kara
 </td>
 <td style="text-align:left;">
 Manhattan
 </td>
 <td style="text-align:left;">
-Lower East Side
+Midtown
 </td>
 <td style="text-align:left;">
-Private room
+Entire home/apt
 </td>
 <td style="text-align:right;">
 16
 </td>
 <td style="text-align:right;">
-263.52926
+531.08691
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-3015
+11492
 </td>
 <td style="text-align:right;">
-31336375
+4537297
 </td>
 <td style="text-align:left;">
-Brooklyn Room - 20 min from Manhattan
+Rosa B Private Apartment! Quiet and Safe Area.
 </td>
 <td style="text-align:left;">
-Laura
+Eddie
+</td>
+<td style="text-align:left;">
+Queens
+</td>
+<td style="text-align:left;">
+Rego Park
+</td>
+<td style="text-align:left;">
+Entire home/apt
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+191.98875
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12654
+</td>
+<td style="text-align:right;">
+6885369
+</td>
+<td style="text-align:left;">
+Beautiful Apt in Lefferts Gardens
+</td>
+<td style="text-align:left;">
+Godfrey
 </td>
 <td style="text-align:left;">
 Brooklyn
 </td>
 <td style="text-align:left;">
-Bushwick
+Flatbush
 </td>
 <td style="text-align:left;">
 Private room
@@ -2319,7 +2322,7 @@ Private room
 1
 </td>
 <td style="text-align:right;">
-92.44398
+193.29760
 </td>
 </tr>
 </tbody>
@@ -2400,7 +2403,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJhaXJibmI8LXJlYWQuY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:unnamed-chunk-199">Table 14.9: </span>Snippet of Titanic Dataset
+<span id="tab:unnamed-chunk-201">Table 14.9: </span>Snippet of Titanic Dataset
 </caption>
 <thead>
 <tr>
@@ -2447,50 +2450,10 @@ Embarked
 <tbody>
 <tr>
 <td style="text-align:left;">
-172
+403
 </td>
 <td style="text-align:right;">
-172
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-Rice, Master. Arthur
-</td>
-<td style="text-align:left;">
-male
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-382652
-</td>
-<td style="text-align:right;">
-29.1250
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Q
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-791
-</td>
-<td style="text-align:right;">
-791
+403
 </td>
 <td style="text-align:right;">
 0
@@ -2499,106 +2462,25 @@ Q
 3
 </td>
 <td style="text-align:left;">
-Keane, Mr. Andrew "Andy"
+Jussila, Miss. Mari Aina
 </td>
 <td style="text-align:left;">
-male
+female
 </td>
 <td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-12460
-</td>
-<td style="text-align:right;">
-7.7500
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Q
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-125
-</td>
-<td style="text-align:right;">
-125
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-White, Mr. Percival Wayland
-</td>
-<td style="text-align:left;">
-male
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-35281
-</td>
-<td style="text-align:right;">
-77.2875
-</td>
-<td style="text-align:left;">
-D26
-</td>
-<td style="text-align:left;">
-S
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-784
-</td>
-<td style="text-align:right;">
-784
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-Johnston, Mr. Andrew G
-</td>
-<td style="text-align:left;">
-male
-</td>
-<td style="text-align:right;">
-NA
+21
 </td>
 <td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
-2
+0
 </td>
 <td style="text-align:left;">
-W./C. 6607
+4137
 </td>
 <td style="text-align:right;">
-23.4500
+9.8250
 </td>
 <td style="text-align:left;">
 </td>
@@ -2608,10 +2490,10 @@ S
 </tr>
 <tr>
 <td style="text-align:left;">
-732
+442
 </td>
 <td style="text-align:right;">
-732
+442
 </td>
 <td style="text-align:right;">
 0
@@ -2620,13 +2502,13 @@ S
 3
 </td>
 <td style="text-align:left;">
-Hassan, Mr. Houssein G N
+Hampe, Mr. Leon
 </td>
 <td style="text-align:left;">
 male
 </td>
 <td style="text-align:right;">
-11
+20
 </td>
 <td style="text-align:right;">
 0
@@ -2635,15 +2517,137 @@ male
 0
 </td>
 <td style="text-align:left;">
-2699
+345769
 </td>
 <td style="text-align:right;">
-18.7875
+9.5000
 </td>
 <td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+S
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+195
+</td>
+<td style="text-align:right;">
+195
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Brown, Mrs. James Joseph (Margaret Tobin)
+</td>
+<td style="text-align:left;">
+female
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+PC 17610
+</td>
+<td style="text-align:right;">
+27.7208
+</td>
+<td style="text-align:left;">
+B4
 </td>
 <td style="text-align:left;">
 C
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+205
+</td>
+<td style="text-align:right;">
+205
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Cohen, Mr. Gurshon "Gus"
+</td>
+<td style="text-align:left;">
+male
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+A/5 3540
+</td>
+<td style="text-align:right;">
+8.0500
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+S
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+663
+</td>
+<td style="text-align:right;">
+663
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Colley, Mr. Edward Pomeroy
+</td>
+<td style="text-align:left;">
+male
+</td>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+5727
+</td>
+<td style="text-align:right;">
+25.5875
+</td>
+<td style="text-align:left;">
+E58
+</td>
+<td style="text-align:left;">
+S
 </td>
 </tr>
 </tbody>

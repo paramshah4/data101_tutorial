@@ -159,7 +159,10 @@
 <li class="chapter" data-level="6.6" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#data-sets-with-embedded-patterns"><i class="fa fa-check"></i><b>6.6</b> Data sets with embedded patterns</a></li>
 <li class="chapter" data-level="6.7" data-path="fooled_by_randomness.html"><a href="fooled_by_randomness.html#hidden-variables"><i class="fa fa-check"></i><b>6.7</b> Hidden Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a></li>
+<li class="chapter" data-level="7" data-path="normal_distribution.html"><a href="normal_distribution.html"><i class="fa fa-check"></i><b>7</b> Normal distribution</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="normal_distribution.html"><a href="normal_distribution.html#central_limit_theorem"><i class="fa fa-check"></i><b>7.1</b> Central Limit Theorem</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="Derived_attributes.html"><a href="Derived_attributes.html"><i class="fa fa-check"></i><b>8</b> 🔖 Data Transformation with Derived Attributes</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="Derived_attributes.html"><a href="Derived_attributes.html#making-new-categorical-attributes"><i class="fa fa-check"></i><b>8.1</b> Making new categorical attributes</a></li>
@@ -429,10 +432,34 @@ x_i \text{= each value from the population}\\
 <p>The function pnorm(z) calculates the fraction of data points in normal distribution whose z-value is less than z. Regardless of what standard deviation and mean of a given data set is, this fraction is always the same for the same values of z. Z-value is the common denominator normalizing all data distributions. With z-values we may disregard the range of data as well as its mean. It allows us to define distance from the mean in units which are standard deviations (sigmas).</p>
 <p>The reader is encouraged to change all the parameters of this snippet and see the effect of z-value on the number of values exceeding z. This fraction becomes negligible roughly around z approaching 3. For z-values larger than 5, one cannot observe a single value with z&gt;5, unless the data set is very large. Thus, the decline of the Gaussian Bell curve is very steep!</p>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
-eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJub3JtYWw8LXJub3JtKDEwMDAwLG1lYW49MTAsIHNkPTEpXG5zZChub3JtYWwpXG5tZWFuKG5vcm1hbClcbmhpc3Qobm9ybWFsLCA1MClcbmxlbmd0aChub3JtYWxbbm9ybWFsID4xMl0pXG56PC0oMTItMTApLzEwXG4xLXBub3JtKHopIn0=
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJub3JtYWw8LXJub3JtKDEwMDAwLG1lYW49MTAsIHNkPTEpXG5zPC1zZChub3JtYWwpXG5tPC1tZWFuKG5vcm1hbClcbmhpc3Qobm9ybWFsLCA1MClcbmxlbmd0aChub3JtYWxbbm9ybWFsID4xMl0pXG56PC0oMTItbSkvc1xuMS1wbm9ybSh6KSJ9
 </div>
 <p>1-pnorm(z) returns the area under the bell curve with z value larger than z. In our case z=0.2. As you can check 1-pnorm(z) returns 0.42. Thus, 42% of the area under the bell curve is larger than z=0.2.</p>
+<div id="central_limit_theorem" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Central Limit Theorem<a href="normal_distribution.html#central_limit_theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<script src="files/js/dcl.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<p>Normal distribution plays a unique role in statistics. It is not even because many distributions of physical measures such as weight, height, blood pressure follow normal distribution. It is because of what the famous central limit theorem states about distribution of sample means .</p>
+<p>The central limit theorem states that if you have a population with mean μ and standard deviation σ and take sufficiently large random samples from the population with replacement , then the distribution of the sample means will be approximately normally distributed. Notice how unexpected it is. NO MATTER what is the original distribution of data - the distribution of means of samples is NORMAL.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/BrooklynPriceSample1000.png" alt="" />
+<p class="caption">Figure 5.4: Distribution of mean Brooklyn airbnb rental price for 1000 samples each of size =1000</p>
+</div>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/brooklyn2.png" alt="" />
+<p class="caption">Figure 5.5: Distribution of mean Brooklyn airbnb rental price for 1000 samples each of size =100</p>
+</div>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/BrooklynPriceSample5000.png" alt="" />
+<p class="caption">Figure 5.6: Distribution of mean Brooklyn airbnb rental price for 1000 samples each of size =5000</p>
+</div>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJhaXJibmI8LXJlYWQuY3N2KCdodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZGV2Nzc5Ni9kYXRhMTAxX3R1dG9yaWFsL21haW4vZmlsZXMvZGF0YXNldC9haXJibmIuY3N2JykgXG5oaXN0KGFpcmJuYiRwcmljZSwgMTAwKSJ9
+</div>
+<p>Notice how far from normal is the distribution of prices of airbnb rentals. It is multimodal, probably depending on room type, or floor. Nevertheless - as we see - the means prices of samples of airbnb data follow the normal distribution!</p>
 
+</div>
 </div>
             </section>
 

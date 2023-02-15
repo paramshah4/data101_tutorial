@@ -54,14 +54,46 @@ The reader is encouraged to change all the parameters of this snippet and see th
 ```{r,tut=TRUE,height=300}
 
 normal<-rnorm(10000,mean=10, sd=1)
-sd(normal)
-mean(normal)
+s<-sd(normal)
+m<-mean(normal)
 hist(normal, 50)
 length(normal[normal >12])
-z<-(12-10)/10
+z<-(12-m)/s
 1-pnorm(z)
 
 
 ```
 
 1-pnorm(z) returns the area under the bell curve with z value larger than z. In our case z=0.2. As you can check 1-pnorm(z) returns 0.42. Thus, 42% of the area under the bell curve is larger than z=0.2.
+
+
+## Central Limit Theorem {#central_limit_theorem}
+
+<script src="files/js/dcl.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+```{r ,include=FALSE}
+tutorial::go_interactive()
+```
+
+Normal distribution plays a unique role in statistics. It is not even because many distributions of physical measures such as weight, height, blood pressure follow normal distribution.  It is because of what the famous central limit theorem states about distribution of sample means .
+
+The central limit theorem states that if you have a population with mean μ and standard deviation σ and take sufficiently large random samples from the population with replacement , then the distribution of the sample means will be approximately normally distributed. Notice how unexpected it is. NO MATTER what is the original distribution of data - the distribution of means of samples is NORMAL.
+
+![Figure 5.4: Distribution of mean Brooklyn airbnb rental price  for  1000 samples each of size =1000](https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/BrooklynPriceSample1000.png)
+
+![Figure 5.5: Distribution of mean Brooklyn airbnb rental price  for 1000 samples each of size =100](https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/brooklyn2.png)
+
+![Figure 5.6: Distribution of mean Brooklyn airbnb rental price  for 1000 samples each of size =5000](https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/BrooklynPriceSample5000.png)
+
+```{r,tut=TRUE,height=300}
+
+airbnb<-read.csv('https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/dataset/airbnb.csv') 
+hist(airbnb$price, 100)
+
+
+```
+
+
+Notice how far from normal is the distribution of prices of  airbnb rentals.  It is multimodal, probably depending on room type, or floor. Nevertheless - as we see - the means prices  of samples of airbnb data follow the normal distribution!
