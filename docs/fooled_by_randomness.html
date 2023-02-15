@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section: 6 Fooled By Randomness | bookdemo.knit</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section: 6 Fooled By Randomness | bookdemo.knit" />
   <meta property="og:type" content="book" />
@@ -327,8 +327,6 @@
 <li class="chapter" data-level="17.7.1" data-path="Decision_trees.html"><a href="Decision_trees.html#combining-rpart-prediction-models"><i class="fa fa-check"></i><b>17.7.1</b> Combining rpart prediction models</a></li>
 <li class="chapter" data-level="17.7.2" data-path="Decision_trees.html"><a href="Decision_trees.html#combining-multiple-prediction-models-using-rpart"><i class="fa fa-check"></i><b>17.7.2</b> Combining multiple prediction models using rpart</a></li>
 </ul></li>
-<li class="chapter" data-level="17.8" data-path="Decision_trees.html"><a href="Decision_trees.html#submission-of-your-prediction-vector"><i class="fa fa-check"></i><b>17.8</b> Submission of your prediction vector</a></li>
-<li class="chapter" data-level="17.9" data-path="Decision_trees.html"><a href="Decision_trees.html#additional-reference-2"><i class="fa fa-check"></i><b>17.9</b> Additional Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="Linear_regression.html"><a href="Linear_regression.html"><i class="fa fa-check"></i><b>18</b> 🔖 Linear Regression</a>
 <ul>
@@ -340,7 +338,7 @@
 <li class="chapter" data-level="18.3" data-path="Linear_regression.html"><a href="Linear_regression.html#mse"><i class="fa fa-check"></i><b>18.3</b> Calculating the Error using mse()</a></li>
 <li class="chapter" data-level="18.4" data-path="Linear_regression.html"><a href="Linear_regression.html#cross-validate-your-prediction"><i class="fa fa-check"></i><b>18.4</b> Cross Validate your prediction</a></li>
 <li class="chapter" data-level="18.5" data-path="Linear_regression.html"><a href="Linear_regression.html#submission-with-lm"><i class="fa fa-check"></i><b>18.5</b> Submission with lm</a></li>
-<li class="chapter" data-level="18.6" data-path="Linear_regression.html"><a href="Linear_regression.html#additional-reference-3"><i class="fa fa-check"></i><b>18.6</b> Additional Reference</a></li>
+<li class="chapter" data-level="18.6" data-path="Linear_regression.html"><a href="Linear_regression.html#additional-reference-2"><i class="fa fa-check"></i><b>18.6</b> Additional Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="Power_law.html"><a href="Power_law.html"><i class="fa fa-check"></i><b>19</b> Power Law Distribution</a></li>
 <li class="chapter" data-level="20" data-path="Prediction_loop.html"><a href="Prediction_loop.html"><i class="fa fa-check"></i><b>20</b> Prediction models from R library</a>
@@ -435,13 +433,33 @@ Buyer_Age
 <tbody>
 <tr>
 <td style="text-align:left;">
-21149
+330
 </td>
 <td style="text-align:left;">
-LA
+Houston
 </td>
 <td style="text-align:left;">
-Winter
+Fall
+</td>
+<td style="text-align:left;">
+Toyota
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+48047
+</td>
+<td style="text-align:left;">
+Phoenix
+</td>
+<td style="text-align:left;">
+Summer
 </td>
 <td style="text-align:left;">
 Ford
@@ -450,87 +468,67 @@ Ford
 Female
 </td>
 <td style="text-align:right;">
-63
+68
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-41124
-</td>
-<td style="text-align:left;">
-San Diego
-</td>
-<td style="text-align:left;">
-Spring
-</td>
-<td style="text-align:left;">
-GMC
-</td>
-<td style="text-align:left;">
-Female
-</td>
-<td style="text-align:right;">
-41
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-44861
-</td>
-<td style="text-align:left;">
-Chicago
-</td>
-<td style="text-align:left;">
-Fall
-</td>
-<td style="text-align:left;">
-Subaru
-</td>
-<td style="text-align:left;">
-Female
-</td>
-<td style="text-align:right;">
-69
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-32580
-</td>
-<td style="text-align:left;">
-Austin
-</td>
-<td style="text-align:left;">
-Winter
-</td>
-<td style="text-align:left;">
-Honda
-</td>
-<td style="text-align:left;">
-Female
-</td>
-<td style="text-align:right;">
-44
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-29415
+42147
 </td>
 <td style="text-align:left;">
 San Antonio
 </td>
 <td style="text-align:left;">
-Winter
+Summer
 </td>
 <td style="text-align:left;">
-Honda
+Chevrolet
 </td>
 <td style="text-align:left;">
-Female
+Male
 </td>
 <td style="text-align:right;">
-53
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+36664
+</td>
+<td style="text-align:left;">
+Seattle
+</td>
+<td style="text-align:left;">
+Fall
+</td>
+<td style="text-align:left;">
+Chevrolet
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43537
+</td>
+<td style="text-align:left;">
+Philladephia
+</td>
+<td style="text-align:left;">
+Summer
+</td>
+<td style="text-align:left;">
+GMC
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+44
 </td>
 </tr>
 </tbody>
@@ -655,57 +653,57 @@ VoterID
 <tbody>
 <tr>
 <td style="text-align:left;">
-2153
-</td>
-<td style="text-align:left;">
-Democratic
-</td>
-<td style="text-align:right;">
-12084
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-12709
+43
 </td>
 <td style="text-align:left;">
 Republican
 </td>
 <td style="text-align:right;">
-18759
+18126
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-5794
+8341
+</td>
+<td style="text-align:left;">
+Democratic
+</td>
+<td style="text-align:right;">
+16048
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+14565
+</td>
+<td style="text-align:left;">
+Democratic
+</td>
+<td style="text-align:right;">
+8910
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2649
 </td>
 <td style="text-align:left;">
 Republican
 </td>
 <td style="text-align:right;">
-10302
+4394
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2018
+17682
 </td>
 <td style="text-align:left;">
-Democratic
+Republican
 </td>
 <td style="text-align:right;">
-9342
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-14387
-</td>
-<td style="text-align:left;">
-Democratic
-</td>
-<td style="text-align:right;">
-6720
+16542
 </td>
 </tr>
 </tbody>
@@ -797,19 +795,39 @@ GPA
 <tbody>
 <tr>
 <td style="text-align:left;">
-32774
+18879
 </td>
 <td style="text-align:right;">
-62
+21
 </td>
 <td style="text-align:right;">
-96989.09
+199352.0
 </td>
 <td style="text-align:right;">
-29500
+50000
 </td>
 <td style="text-align:right;">
-856
+1350
+</td>
+<td style="text-align:right;">
+2.686554
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+38847
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+156306.4
+</td>
+<td style="text-align:right;">
+41500
+</td>
+<td style="text-align:right;">
+1145
 </td>
 <td style="text-align:right;">
 4.000000
@@ -817,82 +835,62 @@ GPA
 </tr>
 <tr>
 <td style="text-align:left;">
-13109
-</td>
-<td style="text-align:right;">
-79
-</td>
-<td style="text-align:right;">
-56456.28
-</td>
-<td style="text-align:right;">
-21000
-</td>
-<td style="text-align:right;">
-657
-</td>
-<td style="text-align:right;">
-1.412840
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-15567
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-247196.34
-</td>
-<td style="text-align:right;">
-59500
-</td>
-<td style="text-align:right;">
-1582
-</td>
-<td style="text-align:right;">
-1.358599
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-27081
-</td>
-<td style="text-align:right;">
-69
-</td>
-<td style="text-align:right;">
-78995.57
-</td>
-<td style="text-align:right;">
-26000
-</td>
-<td style="text-align:right;">
-767
-</td>
-<td style="text-align:right;">
-1.629659
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-9417
+13120
 </td>
 <td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
-247973.66
+247546.9
 </td>
 <td style="text-align:right;">
 60000
 </td>
 <td style="text-align:right;">
-1590
+1587
 </td>
 <td style="text-align:right;">
-1.291180
+2.594022
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9801
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+238858.1
+</td>
+<td style="text-align:right;">
+58000
+</td>
+<td style="text-align:right;">
+1545
+</td>
+<td style="text-align:right;">
+2.732702
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+46085
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+186987.3
+</td>
+<td style="text-align:right;">
+47500
+</td>
+<td style="text-align:right;">
+1292
+</td>
+<td style="text-align:right;">
+1.284661
 </td>
 </tr>
 </tbody>
@@ -973,7 +971,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

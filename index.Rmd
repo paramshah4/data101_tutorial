@@ -1,5 +1,3 @@
-
-
 --- 
 title: "R Markdown: The Definitive Guide"
 author: "Yihui Xie, J. J. Allaire, Garrett Grolemund"

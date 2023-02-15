@@ -16,8 +16,8 @@ tab:unnamed-chunk-183
 tab:unnamed-chunk-190
 tab:unnamed-chunk-199
 tab:unnamed-chunk-232
-tab:unnamed-chunk-235
-tab:unnamed-chunk-258
+tab:unnamed-chunk-234
+tab:unnamed-chunk-257
 intro
 setting-up-r
 setting
@@ -254,8 +254,6 @@ combining-multiple-prediction-models
 combining-rpart-prediction-models
 combining-multiple-prediction-models-using-rpart
 combining-two-prediction-models-using-rpart-for-moody-data-set
-submission-of-your-prediction-vector
-additional-reference-2
 lr
 introduction-8
 lm
@@ -263,7 +261,7 @@ how-much-do-midterm-project-and-final-exam-count
 mse
 cross-validate-your-prediction
 submission-with-lm
-additional-reference-3
+additional-reference-2
 pld
 MLP
 introduction-9

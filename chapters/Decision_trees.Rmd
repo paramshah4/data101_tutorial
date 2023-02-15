@@ -40,8 +40,8 @@ Lets look at an example on the Moody 2022 dataset.
   - predictors -> SCORE, DOZES_OFF, TEXTING_IN_CLASS, PARTICIPATION
   - data -> moody dataset
   - method -> "class" for classification.
-
-
+  
+  
 ### rpart()
 ```{r,tut=TRUE,height=300}
 library(rpart)
@@ -97,9 +97,9 @@ We can see that after plotting the tree using rpart.plot() function, the tree is
 
 To study more in detail the arguments that can be passed to the rpart.plot() function, please look at these guides [rpart.plot](https://www.rdocumentation.org/packages/rpart.plot/versions/3.0.9/topics/rpart.plot) and [Plotting with rpart.plot (PDF)](http://www.milbo.org/doc/prp.pdf)
 
----
+
+
 **NOTE**: In this chapter, from this point forward, the rpart.plots() generated in any example below will be shown as images, and also the code to generate those rpart.plots will be commented in the interactive code blocks. If you want to generate these plots yourself, please use a local Rstudio or R environment.
----
 
 ## Rpart Control {#rpartcontrol}
 
@@ -273,9 +273,9 @@ Let's look at the cross_validate() function in action in the example below.
 We will pass the tree with formula as `GRADE ~ SCORE+DOZES_OFF+TEXTING_IN_CLASS+PARTICIPATION`, and control parameter, with `minsplit=100`. 
 And for cross_validate() function, we will use` n_iter=5, and split_raitio=0.7` 
 
----
+
 **NOTE:** Cross-Validation repository is already preloaded for the following interactive code block. Thus you can directly use the cross_validate() function in the following interactive code block. But if you wish to use the code_validate() function locally, please use 
----
+
 
 ```
 install.packages("devtools") 
@@ -664,31 +664,3 @@ kableExtra::scroll_box(temp,width = "100%")
 ```
 
 ![Output tree plot of after combining model1 and model2](https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/img/predblog/multi_model.png)
-
-Next snippet shows how to submit your prediction vector to Kaggle by creating your submission data frame. 
-
-## Submission of your prediction vector
-
-```{r,tut=TRUE,height=600}
-library(rpart)
-test<-read.csv('https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/dataset/M2022testSNoGrade.csv')
-submission<-read.csv('https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/dataset/M2022submission.csv')
-train <- read.csv("https://raw.githubusercontent.com/dev7796/data101_tutorial/main/files/dataset/M2022train.csv")
-
-tree <- rpart(Grade ~ Major+Score+Seniority, data = train, method = "class",control=rpart.control(minbucket = 200))
-tree
-
-prediction <- predict(tree, test, type="class")
-
-#Now make your submission file - it will have the IDs and now the predicted grades
-submission$Grade<-prediction 
-
-# use write.csv(submission, 'submission.csv', row.names=FALSE) to store submission as csv file on your machine and subsequently submit it on Kaggle
-```
-
-## Additional Reference
-
-<button class="btn btn-primary" data-toggle="collapse" data-target="#dt12"> Decision trees </button> 
-<div id="dt12" class="collapse">
-<embed src="https://docs.google.com/presentation/d/1krkp_icoYBVxISnCndr2BtOOZud1Xc6CCiuLDBUa7TU/edit?usp=sharing" width="100%" height="500px"></embed>
-</div>
